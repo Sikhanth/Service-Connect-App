@@ -20,14 +20,13 @@ const AlertModal = ({
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4 }}
         >
-          {/* SVG Image */}
           <img
             src={image}
             alt="Alert"
             className="w-48 h-48 mb-8 animate-pulse"
           />
 
-          {/* Spinner (optional) */}
+          {/* Spinner */}
           {showSpinner && (
             <div className="w-10 h-10 border-4 border-t-transparent border-current rounded-full animate-spin mb-4"></div>
           )}
