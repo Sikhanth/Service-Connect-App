@@ -2,12 +2,12 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import CategoryItem from "./CategoryItem";
 
-// ✅ Import icons
-import cleaningIcon from "../assets/service_icons/cleaning.svg";
-import electricalIcon from "../assets/service_icons/electrical.svg";
-import beautyIcon from "../assets/service_icons/beauty.svg";
-import deliveryIcon from "../assets/service_icons/delivery.svg";
-import technologyIcon from "../assets/service_icons/technology.svg";
+
+import cleaningIcon from "../../assets/service_icons/cleaning.svg";
+import electricalIcon from "../../assets/service_icons/electrical.svg";
+import beautyIcon from "../../assets/service_icons/beauty.svg";
+import deliveryIcon from "../../assets/service_icons/delivery.svg";
+import technologyIcon from "../../assets/service_icons/technology.svg";
 
 const categories = [
   { id: 1, name: "Cleaning", icon: cleaningIcon, path: "/services/cleaning" },
@@ -33,18 +33,18 @@ const CategoryList = () => {
       </div>
 
       <div className="flex gap-4 overflow-x-auto scrollbar-hide pb-2">
-  {categories.map((item) => (
-    <CategoryItem
-      key={item.id}
-      id={item.id}
-      name={item.name}
-      icon={item.icon}
-      path={item.path}
-    />
-  ))}
-</div>
-</div>
-  );
+            {categories.map((item) => (
+              <CategoryItem
+                key={item.id}
+                id={item.id}
+                name={item.name}
+                icon={item.icon}
+                path={item.path}
+              />
+          ))}
+            </div>
+          </div>
+        );
 };
 
 export default CategoryList;

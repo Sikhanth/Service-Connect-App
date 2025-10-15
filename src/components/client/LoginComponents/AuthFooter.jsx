@@ -1,8 +1,8 @@
 // components/AuthFooter.jsx
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import GoogleIcon from "../assets/google.svg";
-import AppleIcon from "../assets/apple.svg";
+import GoogleIcon from "../../../assets/google.svg";
+import AppleIcon from "../../../assets/apple.svg";
 
 
 const AuthFooter = () => {
@@ -21,7 +21,7 @@ const AuthFooter = () => {
                hover:shadow-lg focus:ring-2 focus:ring-blue-500 transition"
     aria-label="Sign in with Google"
   >
-    <img src={GoogleIcon} alt="Google" className="w-6 h-6" />
+    <img src={GoogleIcon} alt="Google" className="w-6 h-6" /> 
   </button>
 
   <button

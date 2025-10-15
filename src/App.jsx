@@ -1,18 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AuthPage from "./pages/AuthPage";
-import LoginPage from "./pages/LoginPage";
-import OtpPage from "./pages/OtpPage";
-import HomePage from "./pages/HomePage";
+import AuthPage from "./pages/clientPages/AuthPage";
+import ForgotPasswordPage from "./pages/clientPages/ForgotPassword/ForgotPasswordPage";
+import ServiceDetails from "./pages/clientPages/ServiceDetails";
+
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        
+        <Route path="/" element={<ServiceDetails />} />
+        <Route path="/forgotpass" element={<ForgotPasswordPage />} /> 
 
-        <Route path="/signup" element={<AuthPage />} />
-        <Route path="/otp" element={<OtpPage />} />
-        <Route path="/home" element={<HomePage />} /> 
+
       </Routes>
     </BrowserRouter>
   );

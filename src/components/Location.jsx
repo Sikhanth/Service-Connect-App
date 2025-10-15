@@ -21,7 +21,8 @@ const Location = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-[#D9D9DB] px-6">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#2b2b2b] px-6">
+
       <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-sm text-center">
         <h2 className="text-[#1D1F2A] text-xl font-bold mb-6">Allow Location</h2>
 

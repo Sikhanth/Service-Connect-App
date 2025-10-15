@@ -3,7 +3,7 @@ import { Search, Filter } from "lucide-react";
 
 const filterOptions = ["Near By", "10 KM", "All"];
 
-const SearchBar = ({ onSearch, onFilterChange }) => {
+const SearchBar = ({ onSearch, onFilterChange, showFilter = true }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [activeFilter, setActiveFilter] = useState("Near By");
 
@@ -19,8 +19,7 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center gap-3 p-4 bg-gray-50">
-      {/* 🔍 Search bar */}
+    <div className="w-full flex flex-col items-center gap-3 px-4 pt-4">
       <div className="w-full flex items-center justify-between bg-[#736A68] text-white rounded-full px-4 py-3 shadow-md">
         <Search className="w-5 h-5 text-white mr-2" />
         <input
@@ -33,22 +32,23 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
         <Filter className="w-5 h-5 text-white ml-2" />
       </div>
 
-      {/* ⚙️ Filter tab bar */}
-      <div className="w-full flex bg-white rounded-full shadow-md overflow-hidden">
-        {filterOptions.map((option) => (
-          <button
-            key={option}
-            onClick={() => handleFilterClick(option)}
-            className={`flex-1 px-5 py-1.5 text-sm font-medium transition-colors ${
-              activeFilter === option
-                ? "bg-black text-white"
-                : "bg-white text-black"
-            }`}
-          >
-            {option}
-          </button>
-        ))}
-      </div>
+      {showFilter && (
+        <div className="w-full flex bg-white rounded-full shadow-md overflow-hidden">
+          {filterOptions.map((option) => (
+            <button
+              key={option}
+              onClick={() => handleFilterClick(option)}
+              className={`flex-1 px-5 py-1.5 text-sm font-medium transition-colors ${
+                activeFilter === option
+                  ? "bg-black text-white"
+                  : "bg-white text-black"
+              }`}
+            >
+              {option}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

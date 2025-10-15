@@ -1,8 +1,8 @@
 // pages/LoginPage.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AppHeader from "../components/AppHeader";
-import AuthFooter from "../components/AuthFooter";
+import AppHeader from "../../components/client/LoginComponents/AppHeader";
+import AuthFooter from "../../components/AuthFooter";
 import {
   FaEnvelope,
   FaLock,

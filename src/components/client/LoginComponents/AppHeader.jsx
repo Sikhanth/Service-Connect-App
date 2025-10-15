@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/serviceconnect.png';
+import logo from '../../../assets/serviceconnect.png';
 
 const AppHeader = () => {
   return (
