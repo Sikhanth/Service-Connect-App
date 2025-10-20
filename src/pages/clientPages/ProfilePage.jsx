@@ -1,8 +1,8 @@
 // pages/ProfilePage.jsx
 import React from "react";
 import { IoMdArrowBack } from "react-icons/io";
-import Header from "../components/Header";
-import ProfileForm from "../components/ProfileForm";
+import Header from "../../components/Header";
+import ProfileForm from "../../components/ProfileForm";
 
 const ProfilePage = () => {
   return (

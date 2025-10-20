@@ -83,7 +83,7 @@ const ReviewsList = () => {
         <p className="text-sm sm:text-base md:text-lg text-gray-600 mt-1">Based on 488 reviews</p>
       </div>
 
-      {/* 🔘 Category Buttons (Horizontal Scroll) */}
+      
       <div className="w-full overflow-x-auto mb-6 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
         <div className="flex space-x-3 w-max px-2">
           {Object.keys(categorizedReviews).map((category) => (

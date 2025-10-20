@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../components/Header";
-import OtpVerification from "../components/OtpVerification";
+import Header from "../../components/Header";
+import OtpVerification from "../../components/OtpVerification";
 
 const OtpPage = () => {
   return (

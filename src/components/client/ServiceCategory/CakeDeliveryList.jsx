@@ -1,8 +1,8 @@
 import React from "react";
 import CakeDeliveryItem from "./CakeDeliveryItem";
-import cake1 from "../../assets/cake.png";
-import cake2 from "../../assets/cake.png";
-import cake3 from "../../assets/cake.png";
+import cake1 from "../../../assets/cake.png";
+import cake2 from "../../../assets/cake.png";
+import cake3 from "../../../assets/cake.png";
 
 const cakeData = [
   {

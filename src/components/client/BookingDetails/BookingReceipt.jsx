@@ -1,14 +1,19 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
-const BookingReceipt = () => {
+const BookingReceipt = ({
+  buttonText = "Accept and Pay Advance",
+  showDropdown = true, // ✅ controls the ˅ icon
+}) => {
   return (
-    <div className="px-6 md:px-12 lg:px-24 bg-[#D9D9DB] min-h-screen">
-      <div className="bg-white p-6">
-        <h1>Appointment</h1>
+    <div className="bg-[#D9D9DB] min-h-screen pt-8 px-6.5 rounded-3xl">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 md:px-12 lg:px-24 bg-white p-6 rounded-lg shadow-sm">
+        <h1 className="text-2xl font-semibold text-[#1D1F2A] mb-4">
+          Appointment
+        </h1>
 
         {/* Date and Time */}
-        <div className="flex items-center justify-center space-x-2 pt-4 pb-0 text-base font-medium text-[#1D1F2A]">
+        <div className="flex flex-wrap items-center justify-center gap-3 pb-2 text-base font-medium text-[#1D1F2A]">
           <div className="bg-[#EEEEEF] rounded-md px-6 py-2">
             <p>June 10, 2014</p>
           </div>
@@ -17,11 +22,11 @@ const BookingReceipt = () => {
           </div>
         </div>
 
-        {/* Invoice */}
-        <div className="mt-4 bg-white p-6 text-[#7082ea] pl-0">
-          <h2 className="text-xl font-semibold mb-4">Invoice</h2>
+        {/* Invoice Section */}
+        <div className="mt-6">
+          <h2 className="text-xl font-semibold mb-4 text-[#1D1F2A]">Invoice</h2>
 
-          <table className="w-full border-collapse">
+          <table className="w-full border-collapse text-[#1D1F2A]">
             <thead>
               <tr className="border-b border-black">
                 <th className="text-left py-2">Sl.No</th>
@@ -51,39 +56,37 @@ const BookingReceipt = () => {
           </table>
 
           {/* Terms and Conditions */}
-          <div className="mt-4">
-            <div>
-              <p className="text-base font-medium mb-1">Terms and Conditions</p>
-              <p className="text-base font-medium pl-6">Valid up to 1 month</p>
-            </div>
+          <div className="mt-6">
+            <p className="text-lg font-medium mb-1">Terms and Conditions</p>
+            <p className="pl-6 text-base text-gray-700">Valid up to 1 month</p>
 
             <div className="mt-4">
               <p className="text-base font-medium mb-1 text-amber-700">
                 Additional Requirements 🛑
               </p>
-              <p className="text-base font-medium pl-6">Provide Ladder</p>
-              <p className="text-base font-medium pl-6">
-                Bulb should be provided
-              </p>
+              <p className="pl-6 text-base text-gray-700">Provide Ladder</p>
+              <p className="pl-6 text-base text-gray-700">Bulb should be provided</p>
             </div>
           </div>
-
-          
         </div>
       </div>
-      {/* Accept and Pay Advance Button */}
-          <button
-            type="submit"
-            className="w-full mt-6 flex items-center justify-center bg-[#1D1F2A] text-white font-semibold py-2 rounded-full shadow-md relative"
-          >
-            <span>Accept and Pay Advance</span>
-            <span className="ml-2 text-white text-lg">˅</span>
 
-            {/* White round icon at the right end */}
-            <span className="absolute right-5 w-8 h-8 bg-white rounded-full flex items-center justify-center">
-              <FaArrowRight className="text-black" size={14} />
-            </span>
-          </button>
+      {/* ✅ Bottom Action Button */}
+      <button
+        type="submit"
+        className="w-full mt-4 mb-0 flex items-center justify-center bg-[#1D1F2A] text-white font-semibold py-3 rounded-full shadow-md relative"
+      >
+        <span>{buttonText}</span>
+
+        {/* ✅ Dropdown only if showDropdown=true */}
+        {showDropdown && (
+          <span className="ml-2 text-white text-lg">˅</span>
+        )}
+
+        <span className="absolute right-5 w-8 h-8 bg-white rounded-full flex items-center justify-center">
+          <FaArrowRight className="text-black" size={14} />
+        </span>
+      </button>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const CategoryItem = ({ id, name, icon, path }) => {
+const CategoryItem = ({ id, icon, path }) => {
   const navigate = useNavigate();
 
   return (
@@ -12,8 +12,8 @@ const CategoryItem = ({ id, name, icon, path }) => {
     >
       <img
         src={icon}
-        alt={name}
-        className="w-16 h-16 object-contain"
+        alt=""
+        className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain"
       />
     </div>
   );

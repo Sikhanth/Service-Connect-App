@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AppHeader from "../../components/client/LoginComponents/AppHeader";
-import AuthFooter from "../../components/AuthFooter";
+import AuthFooter from "../../components/client/LoginComponents/AuthFooter";
 import {
   FaEnvelope,
   FaLock,

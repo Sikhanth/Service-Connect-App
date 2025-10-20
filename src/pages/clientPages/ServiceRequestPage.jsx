@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../components/Header'
-import ServiceRequest from '../components/ServiceRequest'
+import Header from '../../components/Header'
+import ServiceRequest from '../../components/ServiceRequest'
 
 const ServiceRequestPage = () => {
   return (

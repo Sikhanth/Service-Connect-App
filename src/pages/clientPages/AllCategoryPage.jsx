@@ -8,7 +8,7 @@ const AllCategoryPage = () => {
     <div className="min-h-screen bg-[#D4D4D6] flex flex-col">
       <Header type="category" title="ALL CATEGORY" />
 
-      <div className="flex-1 mt-8 overflow-y-auto pb-24">
+      <div className="flex-1 mt-8 mb-8 overflow-y-auto pb-24">
           <AllCategoryList />
       </div>
 

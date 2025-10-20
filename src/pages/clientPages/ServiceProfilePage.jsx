@@ -1,7 +1,7 @@
 // pages/ServiceProfilePage.jsx
 import React from "react";
-import Header from "../components/Header";
-import ServiceProfile from "../components/ServiceProfile";
+import Header from "../../components/Header";
+import ServiceProfile from "../../components/ServiceProfile";
 
 const ServiceProfilePage = () => {
   return (

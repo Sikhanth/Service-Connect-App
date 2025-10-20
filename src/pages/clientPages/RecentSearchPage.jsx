@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Header from "../components/Header";
-import SearchBar from "../components/SearchBar";
-import RecentSearch from "../components/RecentSearch";
+import Header from "../../components/Header";
+import SearchBar from "../../components/SearchBar";
+import RecentSearch from "../../components/RecentSearch";
 
 const RecentSearchPage = () => {
   const [recentSearches, setRecentSearches] = useState([]);

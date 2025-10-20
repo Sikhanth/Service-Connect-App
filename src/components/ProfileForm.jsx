@@ -1,7 +1,7 @@
 // components/ProfileForm.jsx
 import React, { useState } from "react";
 import { FaUserCircle, FaCalendarAlt, FaEnvelope, FaArrowRight } from "react-icons/fa";
-import AlertModal from "../components/AlertModal";
+import AlertModal from "./AlertModal";
 
 const ProfileForm = () => {
   const [formData, setFormData] = useState({
@@ -26,13 +26,8 @@ const ProfileForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Profile form submitted", formData);
-
     setShowAlert(true);
-    setTimeout(() => {
-      setShowAlert(false);
-      console.log("Process complete!");
-    }, 3000);
+    setTimeout(() => setShowAlert(false), 3000);
   };
 
   return (
@@ -44,17 +39,17 @@ const ProfileForm = () => {
         background="black"
       />
 
-      <div className="flex flex-col items-center px-6 py-4">
+      <div className="flex flex-col items-center px-4 sm:px-6 md:px-8 lg:px-12 py-6">
         <div className="relative mb-6">
-          <FaUserCircle size={100} className="text-gray-400" />
-          <button className="absolute bottom-1 right-1 bg-gray-700 p-1 rounded-full text-white text-xs">
+          <FaUserCircle size={100} className="text-gray-400 md:text-[120px] lg:text-[140px]" />
+          <button className="absolute bottom-1 right-1 bg-gray-700 p-1 rounded-full text-white text-xs md:text-sm">
             ✏️
           </button>
         </div>
 
         <form
           onSubmit={handleSubmit}
-          className="w-full max-w-md flex flex-col space-y-4"
+          className="w-full max-w-md md:max-w-lg lg:max-w-xl flex flex-col space-y-4"
         >
           {[
             { label: "Full Name", name: "fullName" },
@@ -75,7 +70,7 @@ const ProfileForm = () => {
                   name={field.name}
                   value={formData[field.name]}
                   onChange={handleChange}
-                  className="w-full bg-[#736A68] text-white rounded-xl px-4 py-3 placeholder-white shadow-md"
+                  className="w-full bg-[#736A68] text-white rounded-xl px-4 py-3 placeholder-white shadow-md md:py-4"
                 >
                   <option value="">Select Gender</option>
                   <option value="male">Male</option>
@@ -85,7 +80,7 @@ const ProfileForm = () => {
               ) : (
                 <div className="relative">
                   {field.icon && (
-                    <span className="absolute inset-y-0 left-4 flex items-center text-white opacity-70">
+                    <span className="absolute inset-y-0 left-4 flex items-center text-white opacity-70 md:left-5">
                       {field.icon}
                     </span>
                   )}
@@ -96,8 +91,8 @@ const ProfileForm = () => {
                     value={formData[field.name]}
                     onChange={handleChange}
                     className={`w-full ${
-                      field.icon ? "pl-10" : "pl-4"
-                    } pr-4 py-3 rounded-xl bg-[#736A68] text-white placeholder-white shadow-md`}
+                      field.icon ? "pl-10 md:pl-12" : "pl-4 md:pl-6"
+                    } pr-4 py-3 md:py-4 rounded-xl bg-[#736A68] text-white placeholder-white shadow-md`}
                   />
                 </div>
               )}
@@ -106,10 +101,10 @@ const ProfileForm = () => {
 
           <button
             type="submit"
-            className="mt-4 flex items-center justify-center bg-[#1D1F2A] text-white font-semibold py-3 rounded-full shadow-md relative"
+            className="mt-4 flex items-center justify-center bg-[#1D1F2A] text-white font-semibold py-3 md:py-4 rounded-full shadow-md relative hover:bg-gray-800 transition"
           >
-            <span>Continue</span>
-            <span className="absolute right-4 w-8 h-8 bg-white rounded-full flex items-center justify-center">
+            <span className="text-sm md:text-base lg:text-lg">Continue</span>
+            <span className="absolute right-4 w-8 h-8 md:w-10 md:h-10 bg-white rounded-full flex items-center justify-center">
               <FaArrowRight className="text-[#1D1F2A]" size={16} />
             </span>
           </button>

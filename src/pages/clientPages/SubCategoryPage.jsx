@@ -9,13 +9,13 @@ const SubCategoryPage = () => {
   
       <Header type="category" title="Delivery Services" />
 
-      {/* Category Grid */}
+    
       <div className="flex-1 mt-8 overflow-y-auto pb-24">
        
         <AllCategoryList />
       </div>
 
-      {/* Toolbar */}
+      
       <div className="fixed bottom-0 left-0 w-full z-10">
         <ToolBar />
       </div>

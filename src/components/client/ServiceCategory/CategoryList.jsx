@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import CategoryItem from "./CategoryItem";
 
 
-import cleaningIcon from "../../assets/service_icons/cleaning.svg";
-import electricalIcon from "../../assets/service_icons/electrical.svg";
-import beautyIcon from "../../assets/service_icons/beauty.svg";
-import deliveryIcon from "../../assets/service_icons/delivery.svg";
-import technologyIcon from "../../assets/service_icons/technology.svg";
+import cleaningIcon from "../../../assets/service_icons/cleaning.svg";
+import electricalIcon from "../../../assets/service_icons/electrical.svg";
+import beautyIcon from "../../../assets/service_icons/beauty.svg";
+import deliveryIcon from "../../../assets/service_icons/delivery.svg";
+import technologyIcon from "../../../assets/service_icons/technology.svg";
 
 const categories = [
   { id: 1, name: "Cleaning", icon: cleaningIcon, path: "/services/cleaning" },
